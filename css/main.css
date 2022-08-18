@@ -1,0 +1,238 @@
+/*estilos html servicio*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, li, p{
+    color: black;
+}
+/*body*/
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    background-color: rgb(204, 209, 209);
+}
+
+.contenedor-servicio div h2{
+    text-align: center;
+}
+
+/*footer*/
+footer{
+    margin:0 10px 0 10px;
+    padding-left: 25px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #002B5B; 
+    font-size: 15px;
+}
+footer div{
+    margin: 20px 0px;
+}
+footer ul{
+    list-style-type: none;
+}
+footer div img{
+    margin-bottom: 0;
+    height: 20px;
+    width: 20px;
+}
+/*cajas*/
+.cajas{
+    margin-top: 50px;
+    margin-bottom: 200px;
+    height: auto;
+    width: 350px;
+    display: grid;
+    grid-area: cajas;
+    grid-template-columns: 1fr;
+    background-color: rgba(255, 255, 255, 0.308);
+    border: 1px solid black;
+    justify-self: center;
+}
+.cajas div{
+    margin: 15px;
+    padding-top: 15px;
+    border: 1px solid black;
+}
+.cajas div img{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: relative;  
+}
+aside{
+    display: none;
+}
+.contenedor-servicio .banner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.banner img{
+    height: 200px;
+    width: 500px;
+}
+main div div{
+    margin: 50px;
+}
+.info{
+    margin: 100px 10px;
+    background-color: #002B5B;
+}
+.info div{
+    margin: 100px;
+    padding-bottom: 20px;
+}
+.formulario{
+    margin: 10px;
+    border: 1px solid black;
+    align-content: center;
+}
+h5{
+    font-size: 20px;
+}
+/*estilos media queries*/
+@media screen and (min-width:400px){
+    /*aside*/
+    aside{
+        display: grid;
+        grid-area: banner;
+        width: 100%;
+    }
+    aside img{
+        height: 200px;
+        width: 500px;
+    } 
+    footer ul, div{
+        font-size: 20px;
+    } 
+    .cajas{
+        height: 500px;
+        width: 450px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    /*estilos servicio*/
+    .formulario{
+        margin: 200px 50px;
+    }
+}
+@media screen and (min-width:600px){
+    /*cajas*/
+    .cajas{
+        height: 500px;
+        width: 600px;
+        margin-left: 100px;
+    } 
+
+    .banner img{
+        margin-left: 200px ;
+        height: 200px;
+        max-width: 600px;
+    } 
+}
+@media screen and (min-width:1024px) {    
+    /*aside*/
+    aside img{
+        height: 200px;
+        width: 700px;
+    }
+    .banner{
+        display: grid;
+        grid-area: banner;
+    }
+    .banner img{
+        width: 100vw;
+    } 
+
+    .contenedor-servicio{
+        display: grid;
+        grid-template-areas: 
+        "main main"
+        "banner banner"
+        "formulario formulario"
+        "cajas cajas";
+        justify-items: center;
+    }
+
+    .info{
+        width: 750px;
+        margin-left: 375px;
+    }
+
+    .formulario{
+        width: 750px;
+        display: grid;
+        grid-area: formulario;
+        margin-left: 550px;
+    }
+
+    /*propiedades transform*/
+    main div div img{
+        transition: 2s;
+    }   
+    main div div img:hover{
+        transform: scale(1.2);
+    }
+    main div div button:hover{
+        transform: scale(0.9);
+    }
+    nav ul li:hover{
+        transform: scale(0.9);
+    }
+    main div div button:hover{
+        transform: scale(0.9);
+    }
+    header nav ul li:hover{
+        transform: scale(0.9);
+    }
+    .cajas div img{
+        transition: 2s;
+    }
+    .cajas div img:hover{
+        transform: scale(1.2);
+    }
+}
+
+
+
+
+
+
+/*bootstrap*/
+#carouselExampleCaptions{
+    margin: 100px;
+}
+.info-1{
+    margin: 100px 10px;
+}
+.card-group{
+    margin: 100px 10px;
+}
+.img-footer img{
+    height: 20px;
+    width: 20px;
+}
+/*estilos media queries*/
+@media screen and (min-width:500px) {
+    .sec-info-1{
+        display: flex;
+        justify-content: center;
+    }
+    .info-1{
+        margin: 100px 10px;
+        height: 500px;
+        width: 500px;
+     
+    }
+    .info-1 img{
+        height: 100%;
+        width: 100%;
+    }
+    .img-footer img{
+        height: 25px;
+        width: 25px;
+    }
+}
